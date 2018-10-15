@@ -8,7 +8,7 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-public class DesompositionTest {
+public class DecompositionTests {
 
     static String issueID;
     static final Logger logger = Logger.getLogger(SampleTest.class);
@@ -26,7 +26,7 @@ public class DesompositionTest {
         String projectKey="QAAUT6";
 
         ValidatableResponse response = JiraApiActions.createIssue(
-                JiraApiJsonFixture.generateIssueJSON(summary,assigneeName,projectKey));
+                JiraApiJsonFixture.createIssueJSON(summary,assigneeName,projectKey));
 
         Assert.assertEquals(response.extract().statusCode(),201);
         Assert.assertTrue(response.extract().contentType().contains(ContentType.JSON.toString()));
@@ -42,9 +42,21 @@ public class DesompositionTest {
 
         String comment = "Sample comment added with API methods";
 
-        ValidatableResponse response = JiraApiActions.addComment(issueID,comment);
+        ValidatableResponse response = JiraApiActions.addComment(issueID,JiraApiJsonFixture.addCommentJSON(comment));
 
         Assert.assertEquals(response.extract().statusCode(),201);
+        Assert.assertTrue(response.extract().contentType().contains(ContentType.JSON.toString()));
+
+    }
+
+    @Test(dependsOnMethods = {"createIssueTest"}, priority = 2)
+    public void changePriorityTest(){
+
+        String priorityId = "4";
+
+        ValidatableResponse response = JiraApiActions.changePriority(issueID,JiraApiJsonFixture.changePriorityJSON(priorityId));
+
+        Assert.assertEquals(response.extract().statusCode(),204);
         Assert.assertTrue(response.extract().contentType().contains(ContentType.JSON.toString()));
 
     }

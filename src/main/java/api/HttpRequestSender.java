@@ -43,6 +43,24 @@ public class HttpRequestSender {
 
     }
 
+    public static ValidatableResponse put(String path, String json){
+        ValidatableResponse response = given()
+                .header("Content-Type", ContentType.JSON)
+                .header("Cookie", "JSESSIONID=" + Authorization.JSESSIONID)
+                .body(json)
+                .when()
+                .put(path)
+                .then();
+
+        logger.info("Method: PUT");
+        logger.info("URL: " + JiraApiParameters.BASE_URI + path);
+        logger.info("REQUEST String: " + json);
+        logger.info("RESPONSE STATUS_CODE: " + response.extract().statusCode());
+
+        return response;
+
+    }
+
     public static ValidatableResponse delete(String path){
         ValidatableResponse response = given()
                   .header("Content-Type", ContentType.JSON)

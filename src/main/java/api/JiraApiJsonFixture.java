@@ -14,7 +14,7 @@ public class JiraApiJsonFixture {
     }
 
 
-    public static String generateIssueJSON(String summary, String assigneeName, String projectKey){
+    public static String createIssueJSON(String summary, String assigneeName, String projectKey){
         String issueTypeId = "10105";
 
         JSONObject issueCreate = new JSONObject();
@@ -35,7 +35,7 @@ public class JiraApiJsonFixture {
         return issueCreate.toString();
     }
 
-    public static String generateCommentJSON(String commentText){
+    public static String addCommentJSON(String commentText){
         JSONObject comment = new JSONObject();
         JSONObject body = new JSONObject();
         JSONArray  bodyContent = new JSONArray();
@@ -67,4 +67,15 @@ public class JiraApiJsonFixture {
         return comment.toString();
     }
 
+    public static String changePriorityJSON(String priorityID){
+        JSONObject issue = new JSONObject();
+        JSONObject fields = new JSONObject();
+        JSONObject priority = new JSONObject();
+
+        priority.put("id",priorityID);
+        fields.put("priority",priority);
+        issue.put("fields",fields);
+
+        return issue.toString();
+    }
 }

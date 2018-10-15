@@ -11,10 +11,11 @@ public class JiraApiActions {
     }
 
     public static ValidatableResponse addComment(String issueID, String comment){
-        return HttpRequestSender
-                .post(
-                        String.format(JiraApiParameters.addCommentPath,issueID),
-                        JiraApiJsonFixture.generateCommentJSON(comment));
+        return HttpRequestSender.post(String.format(JiraApiParameters.addCommentPath,issueID),comment);
+    }
+
+    public static ValidatableResponse changePriority(String issueID, String priority){
+        return HttpRequestSender.put(String.format(JiraApiParameters.editIssuePath,issueID),priority);
     }
 
     public static ValidatableResponse deleteIssue(String issueID){
