@@ -47,7 +47,7 @@ public class SampleTest {
     @Test(dependsOnMethods = "loginToJiraTest")
     public void createIssueTest(){
         String summary = "Sample test QAAUT6_0918";
-        String assignee = "Vadim_Lizogub";
+        String assignee = "webinar5";
         String projectId = "11400";
         String issueTypeId = "10105";
 
