@@ -5,10 +5,13 @@ import org.json.JSONObject;
 
 public class JiraApiJsonFixture {
 
+    private static String AUTH_USERNAME = "webinar5";
+    private static String AUTH_PASSWORD = "webinar5";
+
     public static String authorizeCredentials(){
         JSONObject login = new JSONObject();
-        login.put("username", "webinar5");
-        login.put("password", "webinar5");
+        login.put("username", JiraApiJsonFixture.AUTH_USERNAME);
+        login.put("password", JiraApiJsonFixture.AUTH_PASSWORD);
 
         return login.toString();
     }
