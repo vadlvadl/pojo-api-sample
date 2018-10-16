@@ -2,9 +2,9 @@
 
 This project contains simple API tests which shows how to use POJOs. 
 
-[*SampleTest.java*](../blob/master/src/test/java/SampleTest.java) - tests uses POJO classes
+[*SampleTest.java*](src/test/java/SampleTest.java) - tests uses POJO classes
 
-[*DecompositionTests.java*](../blob/master/src/test/java/DecompositionTests.java) - demonstrates decomposition principles.
+[*DecompositionTests.java*](src/test/java/DecompositionTests.java) - demonstrates decomposition principles.
  Methods for generating JSON objects, sending GET, POST, PUT, DELETE were placed in separate classes.
  
  
@@ -20,19 +20,19 @@ This project contains simple API tests which shows how to use POJOs.
  
 ### Class description
 
- (*Authorization.java*)[../blob/master/src/main/java/api/Authorization.java] - used for login, get JSESSIONID
+ (*Authorization.java*)[src/main/java/api/Authorization.java] - used for login, get JSESSIONID
  
- (*HttpRequestSender.java*)[../blob/master/src/main/java/api/HttpRequestSender.java] - sends GET, POST, PUT, DELETE requests
+ (*HttpRequestSender.java*)[src/main/java/api/HttpRequestSender.java] - sends GET, POST, PUT, DELETE requests
  
- (*JiraApiActions.java*)[../blob/master/src/main/java/api/JiraApiActions.java] - contains functional methods: 
+ (*JiraApiActions.java*)[src/main/java/api/JiraApiActions.java] - contains functional methods: 
  - *createIssue()*
  - *addComment()*
  - *deleteIssue()*
  - ...
  
- (*JiraApiJsonFixture.java*)[../blob/master/src/main/java/api/JiraApiJsonFixture.java] - generates JSON string
+ (*JiraApiJsonFixture.java*)[src/main/java/api/JiraApiJsonFixture.java] - generates JSON string
  
- (*JiraApiParameters.java*)[../blob/master/src/main/java/api/JiraApiParameters.java] - contains API pathes, base URL...
+ (*JiraApiParameters.java*)[src/main/java/api/JiraApiParameters.java] - contains API pathes, base URL...
   
 ### Libraries
 
