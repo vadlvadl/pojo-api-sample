@@ -20,19 +20,19 @@ This project contains simple API tests which shows how to use POJOs.
  
 ### Class description
 
-(*Authorization.java*)[src/main/java/api/Authorization.java] - used for login, get JSESSIONID
+[*Authorization.java*](src/main/java/api/Authorization.java) - used for login, get JSESSIONID
  
-(*HttpRequestSender.java*)[src/main/java/api/HttpRequestSender.java] - sends GET, POST, PUT, DELETE requests
+[*HttpRequestSender.java*](src/main/java/api/HttpRequestSender.java) - sends GET, POST, PUT, DELETE requests
  
-(*JiraApiActions.java*)[src/main/java/api/JiraApiActions.java] - contains functional methods: 
+[*JiraApiActions.java*](src/main/java/api/JiraApiActions.java) - contains functional methods: 
  - *createIssue()*
  - *addComment()*
  - *deleteIssue()*
  - ...
  
-(*JiraApiJsonFixture.java*)[src/main/java/api/JiraApiJsonFixture.java] - generates JSON string
+[*JiraApiJsonFixture.java*](src/main/java/api/JiraApiJsonFixture.java) - generates JSON string
  
-(*JiraApiParameters.java*)[src/main/java/api/JiraApiParameters.java] - contains API pathes, base URL...
+[*JiraApiParameters.java*](src/main/java/api/JiraApiParameters.java) - contains API pathes, base URL...
   
 ### Libraries
 
