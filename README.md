@@ -8,7 +8,7 @@ This project contains simple API tests which shows how to use POJOs.
  Methods for generating JSON objects, sending GET, POST, PUT, DELETE were placed in separate classes.
  
  
-###How to run Test
+### How to run Test
 
  To run test from Intellij Idea
  1. Clone repository
@@ -18,7 +18,7 @@ This project contains simple API tests which shows how to use POJOs.
  4. Add TestNG Run configuration
  
  
-###Class description
+### Class description
 
  *Authorization.java* - used for login, get JSESSIONID
  
@@ -34,7 +34,7 @@ This project contains simple API tests which shows how to use POJOs.
  
  *JiraApiParameters.java* - contains API pathes, base URL...
   
-###Libraries
+### Libraries
 
  1. TestNG
  2. Rest-Assured
